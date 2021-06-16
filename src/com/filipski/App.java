@@ -9,6 +9,7 @@ public class App {
     private JPanel panelMain;
     private JTextField celTemp;
     private JLabel farTemp;
+    private static ImageIcon img = new ImageIcon("Status-weather-clear-icon.png");
 
     public App() {
         buttonConvert.addActionListener(new ActionListener() {
@@ -23,6 +24,7 @@ public class App {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Celsius to Fahrenheit");
+        frame.setIconImage(img.getImage());
         frame.setContentPane(new App().panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
